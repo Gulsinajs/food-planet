@@ -1,0 +1,30 @@
+.header {
+    background-color: lightgray;
+    padding: 24px 0 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.header ul li {
+    list-style: none;
+    display: inline;
+    margin-left: 60px;
+    font-size: 20px;
+    color: #000;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1D3130;
+}
+
+.header img {
+    margin-right: 8px;
+    margin-left: 4px;
+}
+
+.link {
+    color: #FF583E!important;
+}

@@ -1,13 +1,21 @@
 import React from "react";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
+import Header from "./components/Header/Header";
+import Main from "./pages/Main/Main";
+
 
 function App() {
-  return (
-    <>
-      <div className="content" style={{maxWidth: "1600px"}}>
-      </div>
-    </>
-  );
+    return (
+        <>
+            <Header/>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="" element={<Main/>}/>
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
