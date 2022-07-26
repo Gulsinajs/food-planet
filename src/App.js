@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Main from "./pages/Main/Main";
 import Content from "./components/Content/Content";
 import NewProducts from "./components/NewProducts/NewProducts";
+import Burger from "./pages/Burger/Burger";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             <NewProducts/>
             <BrowserRouter>
                 <Routes>
-                    <Route path="" element={<Main/>}/>
+                    <Route path="/" element={<Burger/>}/>
                 </Routes>
             </BrowserRouter>
         </>
