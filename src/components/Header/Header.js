@@ -4,8 +4,15 @@ import Logo from '../../media/icons/LOgo.svg';
 import Arrow from '../../media/icons/arrow.svg';
 import Phone from '../../media/icons/phone.svg';
 import Basket from '../../media/icons/basket.svg';
+import {sum} from '../../constants';
 
 const Header = () => {
+
+    const sumProducts = sum.map(item => (
+        <a className={styles.link} href="#"><img src={Basket} alt="basket"/>{item.number}</a>
+        )
+    );
+
     return (
         <div className={styles.header}>
             <img src={Logo} alt="food planet"/>
@@ -15,7 +22,7 @@ const Header = () => {
                 <li><a href="">Доставка</a></li>
                 <li><a href="">Контакты</a></li>
                 <li><a href=""><img src={Phone} alt="phone"/>+996500405988</a></li>
-                <li><a href=""><img src={Basket} alt="basket"/>1</a></li>
+                <li>{sumProducts}</li>
             </ul>
         </div>
     );
