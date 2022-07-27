@@ -3,20 +3,26 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
 import Header from "./components/Header/Header";
 import Main from "./pages/Main/Main";
-import Content from "./components/Content/Content";
-import NewProducts from "./components/NewProducts/NewProducts";
+import NewProducts from "./pages/NewProducts/NewProducts";
+import Menu from "./pages/Menu/Menu";
 import Burger from "./pages/Burger/Burger";
+import Pizza from "./pages/Pizza/Pizza";
+
 
 
 function App() {
     return (
         <>
             <Header/>
-            <Content/>
-            <NewProducts/>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Burger/>}/>
+                    <Route path="/" element={<Main/>}/>
+                    <Route path="/newProducts" element={<NewProducts/>}>
+                        <Route path="burger" element={<Burger/>}/>
+                    </Route>
+                    <Route path="/menu" element={<Menu/>}>
+                        <Route path="pizza" element={<Pizza/>}/>
+                    </Route>
                 </Routes>
             </BrowserRouter>
         </>

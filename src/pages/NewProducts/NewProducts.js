@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './Menu.module.css';
+import styles from './NewProducts.module.css';
 import {Outlet} from 'react-router-dom';
 
-const Menu = () => {
+const NewProducts = () => {
     return (
-        <div className={styles.menu}>
-            <h2>Меню</h2>
+        <div className={styles.products}>
+            <h2 className={styles.productsTitle}>Новинки</h2>
             <ul>
                 <li><a href="/Menu/Pizza">Пицца</a></li>
                 <li><a href="/NewProducts/Burger">Бургер</a></li>
@@ -20,4 +20,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default NewProducts;
