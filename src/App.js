@@ -9,22 +9,25 @@ import Burger from "./pages/Burger/Burger";
 import Pizza from "./pages/Pizza/Pizza";
 
 
-
 function App() {
     return (
         <>
             <Header/>
+            <Main/>
+            <NewProducts/>
+            <Burger/>
+            <Menu/>
+            <Pizza/>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Main/>}/>
-                    <Route path="/newProducts" element={<NewProducts/>}>
-                        <Route path="burger" element={<Burger/>}/>
-                    </Route>
-                    <Route path="/menu" element={<Menu/>}>
-                        <Route path="pizza" element={<Pizza/>}/>
-                    </Route>
+                    {/*<Route path="/" element={<Main/>}/>*/}
+                    {/*<Route path="/nemProducts" element={<NewProducts/>}/>*/}
+                    {/*<Route path="/burger" element={<Burger/>}/>*/}
+                    {/*<Route path="/menu" element={<Menu/>}/>*/}
+                    {/*<Route path="/pizza" element={<Pizza/>}/>*/}
                 </Routes>
             </BrowserRouter>
+
         </>
     );
 }

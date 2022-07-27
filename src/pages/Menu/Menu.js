@@ -7,8 +7,8 @@ const Menu = () => {
         <div className={styles.menu}>
             <h2>Меню</h2>
             <ul>
-                <li><a href="/Menu/Pizza">Пицца</a></li>
-                <li><a href="/NewProducts/Burger">Бургер</a></li>
+                <li><a href="">Пицца</a></li>
+                <li><a href="">Бургер</a></li>
                 <li><a href="">Суши</a></li>
                 <li><a href="">Роллы</a></li>
                 <li><a href="">Салаты</a></li>
