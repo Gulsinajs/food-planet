@@ -1,20 +1,17 @@
 import React from 'react';
 import styles from './Burger.module.css';
-import firstBurger from '../../media/images/firstBurger.svg';
+import {burgers} from '../../constants';
 
 const Burger = () => {
-    return (
-        <div className={styles.burger}>
+
+    const burgersArray = burgers.map(item => (
             <div className={styles.burgerBox}>
-                <img src={firstBurger} alt="cheeseburger"/>
-                <h3>Чизбургер</h3>
-                <p>Булка, котлета,сыр, соленый огурец, лук, помидор,
-                    салат айсберг,
-                    соус чесночный, соус гриль,
-                    кетчуп, майонез</p>
-                <p className={styles.price}>200 сом</p>
+                <img src={item.image} alt="cheeseburger"/>
+                <h3>{item.title}</h3>
+                <p>{item.subTitle}</p>
+                <p className={styles.price}>{item.price}</p>
                 <div className={styles.optionBtn}>
-                    <button>-</button>
+                    <button>&mdash;</button>
                     <span> 1 </span>
                     <button>+</button>
                 </div>
@@ -22,36 +19,11 @@ const Burger = () => {
                     <button>В корзину</button>
                 </div>
             </div>
-            <div className={styles.burgerBox}>
-                <img src="" alt=""/>
-                <h3></h3>
-                <p></p>
-                <p></p>
-                <button></button>
-                <span></span>
-                <button></button>
-                <button></button>
-            </div>
-            <div className={styles.burgerBox}>
-                <img src="" alt=""/>
-                <h3></h3>
-                <p></p>
-                <p></p>
-                <button></button>
-                <span></span>
-                <button></button>
-                <button></button>
-            </div>
-            <div className={styles.burgerBox}>
-                <img src="" alt=""/>
-                <h3></h3>
-                <p></p>
-                <p></p>
-                <button></button>
-                <span></span>
-                <button></button>
-                <button></button>
-            </div>
+        )
+    );
+    return (
+        <div className={styles.burger}>
+            {burgersArray}
         </div>
     );
 };
