@@ -9,7 +9,7 @@ const Pizza = () => {
                 <img src={item.image} alt=""/>
                 <h3>{item.title}</h3>
                 <p>{item.subTitle}</p>
-                <p className={styles.price}>{item.price}</p>
+                <p className={styles.price}>{item.price}<span> сом</span></p>
                 <div className={styles.optionBtn}>
                     <button>&mdash;</button>
                     <span> 1 </span>
