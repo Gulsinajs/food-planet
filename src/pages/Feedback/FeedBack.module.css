@@ -1,0 +1,47 @@
+.feedBack {
+    background-color: #FFFDFD;
+    width: 100%;
+    height: 304px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 88px;
+}
+
+.feedBackBox {
+    width: 248px;
+    height: 304px;
+    border: 2px solid #1D3130;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3B7976;
+    margin-right: 34px;
+}
+
+img.absolute {
+    position: absolute;
+    top: -2px;
+    left: -10px;
+}
+
+.avatar {
+    margin: 24px 0 8px;
+}
+
+.feedBackUser span {
+    color: #3B7976;
+    margin-right: 2px;
+    margin-top: 8px;
+}
+
+.desc {
+    color: #061817;
+    margin: 8px 16px 16px;
+}
+

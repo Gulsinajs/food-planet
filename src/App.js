@@ -8,7 +8,7 @@ import Menu from "./pages/Menu/Menu";
 import Burger from "./pages/Burger/Burger";
 import Pizza from "./pages/Pizza/Pizza";
 import About from "./pages/About/About";
-
+import FeedBack from "./pages/Feedback/FeedBack";
 
 function App() {
     return (
@@ -20,6 +20,7 @@ function App() {
             <Menu/>
             <Pizza/>
             <About/>
+            <FeedBack/>
             <BrowserRouter>
                 <Routes>
                     {/*<Route path="/" element={<Main/>}/>*/}

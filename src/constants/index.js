@@ -12,22 +12,17 @@ import Delivery from '../media/icons/delivery.svg';
 import Salad from '../media/icons/salad.svg';
 import Menu from '../media/icons/menu.svg';
 import Location from '../media/icons/location.svg';
+import Avatar from '../media/icons/ellipse.svg';
 
-
-export const sum = [
-    {
-        number: "1"
-    }
-];
 
 export const burgers = [
     {
         image: [firstBurger],
         title: "Чизбургер",
         subTitle: "Булка, котлета,сыр, соленый огурец, лук, помидор,\n" +
-                  "салат айсберг,\n" +
-                  "соус чесночный, соус гриль,\n" +
-                  "кетчуп, майонез",
+            "салат айсберг,\n" +
+            "соус чесночный, соус гриль,\n" +
+            "кетчуп, майонез",
         price: "200 сом"
     },
     {
@@ -159,3 +154,34 @@ export const about = [
     }
 ];
 
+export const feedBack = [
+    {
+        image: [Avatar],
+        userName: "Сергей",
+        commit: "Большое спасибо! 5 пицц доставили даже быстрее чем планировалось.\n" +
+            "Пицца была горячая и всему коллективу понравилась!\n" +
+            "День Рождения прошел отлично! :)",
+        date: "02.07.2020"
+    },
+    {
+        image: [Avatar],
+        userName: "Сергей",
+        commit: "Очень вкусные роллы Хаки, всем рекомендую!\n" +
+            "Заказали в первый раз и теперь станем постоянными клиентами! Спасибо!",
+        date: "02.07.2020"
+    },
+    {
+        image: [Avatar],
+        userName: "Сергей",
+        commit: "Очень избирателен в еде, и Уже в третий раз не разочаровываюсь в Food Planet,\n" +
+            "советую всем! Жена тоже довольна!",
+        date: "02.07.2020"
+    },
+    {
+        image: [Avatar],
+        userName: "Сергей",
+        commit: "Хочу поблагодарить за бургер!Очень вкусненький в меру остренький)\n" +
+            "Спасибо, удивили!)",
+        date: "02.07.2020"
+    }
+]
