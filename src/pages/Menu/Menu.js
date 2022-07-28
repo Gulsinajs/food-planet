@@ -5,7 +5,9 @@ import {Outlet} from 'react-router-dom';
 const Menu = () => {
     return (
         <div className={styles.menu}>
-            <h2>Меню</h2>
+            <div className={styles.menuTitle}>
+                <h2>Меню</h2>
+            </div>
             <ul>
                 <li><a href="">Пицца</a></li>
                 <li><a href="">Бургер</a></li>
