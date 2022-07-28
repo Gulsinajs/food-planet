@@ -5,7 +5,9 @@ import {Outlet} from 'react-router-dom';
 const NewProducts = () => {
     return (
         <div className={styles.products}>
-            <h2 className={styles.productsTitle}>Новинки</h2>
+            <div className={styles.productsTitle}>
+                <h2>Новинки</h2>
+            </div>
             <ul>
                 <li><a href="">Пицца</a></li>
                 <li><a href="">Бургер</a></li>
