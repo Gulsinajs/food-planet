@@ -9,6 +9,7 @@ import Burger from "./pages/Burger/Burger";
 import Pizza from "./pages/Pizza/Pizza";
 import About from "./pages/About/About";
 import FeedBack from "./pages/Feedback/FeedBack";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                     {/*<Route path="/pizza" element={<Pizza/>}/>*/}
                 </Routes>
             </BrowserRouter>
+            <Footer/>
         </>
     );
 }
