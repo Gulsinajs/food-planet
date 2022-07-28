@@ -1,0 +1,50 @@
+.about {
+    background-color: #FCFCFC;
+    width: 100%;
+    height: 346px;
+}
+
+.aboutTitle h2 {
+    margin-top: 42px;
+}
+
+.aboutFlex {
+    background-color: #FCFCFC;
+    height: 200px;
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutBox {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #254F4C;
+}
+
+.aboutBox h3 {
+    margin: 16px 0 8px;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.aboutBox p {
+    margin: 0 16px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1D3130;
+}
+
+.about h2 {
+    font-size: 25px;
+    line-height: 29px;
+    color: #254F4C;
+    margin-left: 80px;
+}
+
+.feedBack h2 {
+    margin-top: 30px;
+}

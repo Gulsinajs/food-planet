@@ -8,6 +8,11 @@ import thirdPizza from '../media/images/thirdPizza.svg';
 import fourthPizza from '../media/images/fourthPizza.svg';
 import fifthPizza from '../media/images/fifthPizza.svg';
 import sixthPizza from '../media/images/sixthPizza.svg';
+import Delivery from '../media/icons/delivery.svg';
+import Salad from '../media/icons/salad.svg';
+import Menu from '../media/icons/menu.svg';
+import Location from '../media/icons/location.svg';
+
 
 export const sum = [
     {
@@ -126,6 +131,31 @@ export const pizzas = [
             "соус чесночный, соус гриль,\n" +
             "кетчуп, майонез",
         price: "200 сом"
+    }
+];
+
+export const about = [
+    {
+        image: [Delivery],
+        title: "Мгновенная доставка",
+        subTitle: "Доставим заказанную вами\n" +
+            " еду за 30 минут + напиток в подарок"
+    },
+    {
+        image: [Salad],
+        title: "Свежие продукты",
+        subTitle: "Вся продукция хранится в хороших условиях тем самым продливая срок хранения"
+    },
+    {
+        image: [Menu],
+        title: "Уникальное меню",
+        subTitle: "Ежедневно мы обновляем наше \n" +
+            "меню и том числе коктейльное"
+    },
+    {
+        image: [Location],
+        title: "Доставка",
+        subTitle: "Мы быстро доставляем вашу еду по указанному адресу"
     }
 ];
 

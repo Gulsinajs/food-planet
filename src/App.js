@@ -7,6 +7,7 @@ import NewProducts from "./pages/NewProducts/NewProducts";
 import Menu from "./pages/Menu/Menu";
 import Burger from "./pages/Burger/Burger";
 import Pizza from "./pages/Pizza/Pizza";
+import About from "./pages/About/About";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Burger/>
             <Menu/>
             <Pizza/>
+            <About/>
             <BrowserRouter>
                 <Routes>
                     {/*<Route path="/" element={<Main/>}/>*/}
@@ -27,7 +29,6 @@ function App() {
                     {/*<Route path="/pizza" element={<Pizza/>}/>*/}
                 </Routes>
             </BrowserRouter>
-
         </>
     );
 }
