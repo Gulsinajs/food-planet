@@ -1,11 +1,19 @@
 .about {
     background-color: #FCFCFC;
     width: 100%;
-    height: 346px;
+    /*height: 390px;*/
+}
+
+.about h2 {
+    font-size: 25px;
+    line-height: 29px;
+    color: #254F4C;
+    margin-left: 130px;
 }
 
 .aboutTitle h2 {
-    margin-top: 42px;
+    /*margin-top: 42px;*/
+    padding-top: 42px;
 }
 
 .aboutFlex {
@@ -38,13 +46,7 @@
     color: #1D3130;
 }
 
-.about h2 {
-    font-size: 25px;
-    line-height: 29px;
-    color: #254F4C;
-    margin-left: 80px;
-}
-
 .feedBack h2 {
     margin-top: 30px;
+    padding-bottom: 49px;
 }
