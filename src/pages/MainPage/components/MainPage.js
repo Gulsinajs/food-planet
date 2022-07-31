@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './Main.module.css';
-import smallArrow from "../../media/icons/smallArrow.svg";
-import Burger from "../../media/images/burger.svg";
+import styles from './MainPage.module.css';
+import smallArrow from "../../../media/icons/smallArrow.svg";
+import Burger from "../../../media/images/burger.png";
 
-const Main = () => {
+const MainPage = () => {
     return (
-        <div className={styles.main}>
+        <div className={styles.mainPage}>
             <div className={styles.mainTitle}>
                 <h1>Доставка вкусной еды до 30 минут + напиток в подарок!</h1>
                 <p>Доставим заказ вовремя и можете рассчитывать, что еда будет доставлена всегда горячей и ароматной.</p>
@@ -18,5 +18,4 @@ const Main = () => {
     );
 };
 
-export default Main;
-
+export default MainPage;

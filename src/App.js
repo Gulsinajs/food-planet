@@ -2,36 +2,22 @@ import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
 import Header from "./components/Header/Header";
-import Main from "./pages/Main/Main";
-import NewProducts from "./pages/NewProducts/NewProducts";
-import Menu from "./pages/Menu/Menu";
-import Burger from "./pages/Burger/Burger";
-import Pizza from "./pages/Pizza/Pizza";
-import About from "./pages/About/About";
-import FeedBack from "./pages/Feedback/FeedBack";
 import Footer from "./components/Footer/Footer";
+import MainPage from "./pages/MainPage/components/MainPage";
+import CardPage from "./pages/CardPage/components/CardPage";
 
 function App() {
     return (
         <>
-            <Header/>
-            <Main/>
-            <NewProducts/>
-            <Burger/>
-            <Menu/>
-            <Pizza/>
-            <About/>
-            <FeedBack/>
             <BrowserRouter>
+                <Header/>
                 <Routes>
-                    {/*<Route path="/" element={<Main/>}/>*/}
-                    {/*<Route path="/nemProducts" element={<NewProducts/>}/>*/}
-                    {/*<Route path="/burger" element={<Burger/>}/>*/}
-                    {/*<Route path="/menu" element={<Menu/>}/>*/}
-                    {/*<Route path="/pizza" element={<Pizza/>}/>*/}
+                    <Route path="/" element={<MainPage/>}/>
+                    <Route path="/card" element={<CardPage/>}/>
                 </Routes>
+                <Footer/>
             </BrowserRouter>
-            <Footer/>
+
         </>
     );
 }
