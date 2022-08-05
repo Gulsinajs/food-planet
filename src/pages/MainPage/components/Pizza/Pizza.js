@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Pizza.module.css';
-import {pizzas} from "../../constants";
+import {pizzas} from "../../../../constants";
 
 const Pizza = () => {
 

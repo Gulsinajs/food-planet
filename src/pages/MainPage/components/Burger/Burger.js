@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Burger.module.css';
-import {burgers} from '../../constants';
+import {burgers} from '../../../../constants';
 
 const Burger = () => {
 
@@ -10,12 +10,12 @@ const Burger = () => {
                 <h3>{item.title}</h3>
                 <p>{item.subTitle}</p>
                 <p className={styles.price}>{item.price}</p>
-                <div className={styles.optionBtn}>
+                <div className={styles.burgerBtn}>
                     <button>&mdash;</button>
                     <span> 1 </span>
                     <button>+</button>
                 </div>
-                <div className={styles.btn}>
+                <div className={styles.redBtn}>
                     <button>В корзину</button>
                 </div>
             </div>

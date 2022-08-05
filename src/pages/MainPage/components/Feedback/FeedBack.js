@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './FeedBack.module.css';
-import Pen from '../../media/icons/pen.svg';
-import Pen2 from '../../media/icons/pen2.svg';
-import {feedBack} from "../../constants";
+import Pen from '../../../../media/icons/pen.svg';
+import Pen2 from '../../../../media/icons/pen2.svg';
+import {feedBack} from "../../../../constants";
 
 const FeedBack = () => {
 

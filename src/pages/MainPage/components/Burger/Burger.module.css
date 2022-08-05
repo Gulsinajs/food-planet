@@ -45,7 +45,7 @@ p.price {
     line-height: 23px;
 }
 
-.optionBtn button {
+.burgerBtn button {
     width: 16px;
     color: #FF583E;
     background-color: transparent;
@@ -54,7 +54,7 @@ p.price {
     margin: 24px 0 16px;
 }
 
-.btn button {
+.redBtn button {
     width: 200px;
     height: 48px;
     background-color: #FF583E;
