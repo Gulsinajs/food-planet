@@ -86,8 +86,8 @@ const MainPage = () => {
             <div className={styles.products}>
                 <h2>Новинки</h2>
                 <ul>
-                    <li><NavLink className={setActive} to="/pizza">Пицца</NavLink></li>
-                    <li><NavLink className={setActive} to="/burger">Бургер</NavLink></li>
+                    <li><NavLink className={setActive} to="/MainPage/components/pizza">Пицца</NavLink></li>
+                    <li><NavLink className={setActive} to="/MainPage/components/burger">Бургер</NavLink></li>
                     <li><NavLink className={setActive} to="/sushi">Суши</NavLink></li>
                     <li><NavLink className={setActive} to="/rolls">Роллы</NavLink></li>
                     <li><NavLink className={setActive} to="/salads">Салаты</NavLink></li>
@@ -101,8 +101,8 @@ const MainPage = () => {
             <div className={styles.menu}>
                 <h2>Меню</h2>
                 <ul>
-                    <li><NavLink className={setActive} to="/pizza">Пицца</NavLink></li>
-                    <li><NavLink className={setActive} to="/burger">Бургер</NavLink></li>
+                    <li><NavLink className={setActive} to="/MainPage/components/pizza">Пицца</NavLink></li>
+                    <li><NavLink className={setActive} to="/MainPage/components/burger">Бургер</NavLink></li>
                     <li><NavLink className={setActive} to="/sushi">Суши</NavLink></li>
                     <li><NavLink className={setActive} to="/rolls">Роллы</NavLink></li>
                     <li><NavLink className={setActive} to="/salads">Салаты</NavLink></li>
