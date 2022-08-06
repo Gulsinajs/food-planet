@@ -1,6 +1,6 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 import styles from './NewProducts.module.css';
-import {Outlet} from 'react-router-dom';
 
 const NewProducts = () => {
     return (
@@ -9,15 +9,14 @@ const NewProducts = () => {
                 <h2>Новинки</h2>
             </div>
             <ul>
-                <li><a href="">Пицца</a></li>
-                <li><a href="">Бургер</a></li>
-                <li><a href="">Суши</a></li>
-                <li><a href="">Роллы</a></li>
-                <li><a href="">Салаты</a></li>
-                <li><a href="">Десерты</a></li>
-                <li><a href="">Напитки</a></li>
+                <li><NavLink>Пицца</NavLink></li>
+                <li><NavLink>Бургер</NavLink></li>
+                <li><NavLink>Суши</NavLink></li>
+                <li><NavLink>Роллы</NavLink></li>
+                <li><NavLink>Салаты</NavLink></li>
+                <li><NavLink>Десерты</NavLink></li>
+                <li><NavLink>Напитки</NavLink></li>
             </ul>
-            <Outlet/>
         </div>
     );
 };
