@@ -1,15 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from "react";
 import {NavLink, Outlet} from "react-router-dom";
-import styles from './MainPage.module.css';
+import {useParams} from "react-router-dom";
+import styles from "./MainPage.module.css";
 import smallArrow from "../../../media/icons/smallArrow.svg";
 import Burger from "../../../media/images/burger.png";
-import {about, burgers, feedBack, pizzas} from "../../../constants";
+import {about, burgers, pizzas} from "../../../constants";
 import Pen from "../../../media/icons/pen.svg";
 import Pen2 from "../../../media/icons/pen2.svg";
 
 const MainPage = () => {
 
     const setActive = ({isActive}) => isActive ? styles.active : "";
+
+    const params = useParams();
+    const [feedBacks, setFeedBacks] = useState([]);
+
+    useEffect(() => {
+        fetch(' http://localhost:3000/feedBacks')
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    alert('Error. Status:' + response.status);
+                }
+            })
+            .then(data => setFeedBacks(data))
+    }, [])
 
     const burgersArray = burgers.map(item => (
             <div className={styles.burgerBox}>
@@ -56,19 +72,19 @@ const MainPage = () => {
         )
     );
 
-    const feedBackArray = feedBack.map(item => (
-            <div className={styles.feedBackBox}>
-                <img className={styles.absolute} src={Pen} alt="/"/>
-                <img className={styles.avatar} src={item.image} alt="avatar"/>
-                <div className={styles.feedBackUser}>
-                    <p>{item.userName}</p>
-                    <img src={Pen2} alt="/"/>
-                </div>
-                <p className={styles.desc}>{item.commit}</p>
-                <p>{item.date}</p>
-            </div>
-        )
-    );
+    // const feedBackArray = feedBack.map(item => (
+    //         <div className={styles.feedBackBox}>
+    //             <img className={styles.absolute} src={Pen} alt="/"/>
+    //             <img className={styles.avatar} src={item.image} alt="avatar"/>
+    //             <div className={styles.feedBackUser}>
+    //                 <p>{item.userName}</p>
+    //                 <img src={Pen2} alt="/"/>
+    //             </div>
+    //             <p className={styles.desc}>{item.commit}</p>
+    //             <p>{item.date}</p>
+    //         </div>
+    //     )
+    // );
 
     return (
         <div className={styles.mainPage}>
@@ -137,7 +153,20 @@ const MainPage = () => {
             <div className={styles.feedBack}>
                 <h2>Отзывы</h2>
                 <div className={styles.feedBackFlex}>
-                    {feedBackArray}
+                    {
+                        feedBacks.map(item => {
+                            return <div className={styles.feedBackBox}>
+                                <img className={styles.absolute} src={Pen} alt="/"/>
+                                <img className={styles.avatar} src={item.image} alt="avatar"/>
+                                <div className={styles.feedBackUser}>
+                                    <p>{item.userName}</p>
+                                    <img src={Pen2} alt="/"/>
+                                </div>
+                                <p className={styles.desc}>{item.commit}</p>
+                                <p>{item.date}</p>
+                            </div>
+                        })
+                    }
                 </div>
             </div>
         </div>

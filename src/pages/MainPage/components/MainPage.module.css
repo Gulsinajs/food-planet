@@ -278,7 +278,7 @@ p.price {
 
 .feedBackBox {
     width: 248px;
-    height: 304px;
+    height: 325px;
     border: 2px solid #1D3130;
     border-radius: 40px;
     position: relative;
@@ -300,6 +300,8 @@ img.absolute {
 
 .avatar {
     margin: 24px 0 8px;
+    width: 100px;
+    height: 100px;
 }
 
 .feedBackUser {
