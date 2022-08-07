@@ -16,7 +16,7 @@ const MainPage = () => {
     const [feedBacks, setFeedBacks] = useState([]);
 
     useEffect(() => {
-        fetch(' http://localhost:3000/feedBacks')
+        fetch(' http://localhost:3001/feedBacks')
             .then(response => {
                 if (response.status === 200) {
                     return response.json();
