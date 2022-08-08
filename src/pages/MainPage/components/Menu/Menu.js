@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Menu.module.css';
-import {NavLink, Outlet} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Menu = () => {
 
@@ -18,7 +18,6 @@ const Menu = () => {
                 <li><NavLink className={setActive} to="/desserts">Десерты</NavLink></li>
                 <li><NavLink className={setActive} to="/drinks">Напитки</NavLink></li>
             </ul>
-            <Outlet/>
         </div>
     );
 };
