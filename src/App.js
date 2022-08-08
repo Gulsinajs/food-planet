@@ -6,7 +6,6 @@ import Footer from "./components/Footer/Footer";
 import MainPage from "./pages/MainPage/components/MainPage";
 import CardPage from "./pages/CardPage/components/CardPage";
 import NotFound from "./pages/MainPage/components/NotFound/NotFound";
-import Menu from "./pages/MainPage/components/Menu/Menu";
 
 function App() {
     return (
@@ -15,7 +14,6 @@ function App() {
                 <Header/>
                 <Routes>
                     <Route path="/" element={<MainPage/>}/>
-                    <Route path="/menu" element={<Menu/>}/>
                     <Route path="/card" element={<CardPage/>}/>
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>
