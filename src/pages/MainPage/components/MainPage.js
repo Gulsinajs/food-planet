@@ -8,6 +8,7 @@ import {about, burgers, pizzas} from "../../../constants";
 import Pen from "../../../media/icons/pen.svg";
 import Pen2 from "../../../media/icons/pen2.svg";
 import FeedBack from "./Feedback/FeedBack";
+import NewProducts from "./NewProducts/NewProducts";
 
 const MainPage = () => {
 
@@ -71,18 +72,7 @@ const MainPage = () => {
                     <img src={Burger} alt="burger"/>
                 </div>
             </div>
-            <div className={styles.products}>
-                <h2>Новинки</h2>
-                <ul>
-                    <li><NavLink className={setActive} to="/mainPage/components/pizza">Пицца</NavLink></li>
-                    <li><NavLink className={setActive} to="/mainPage/components/burger">Бургер</NavLink></li>
-                    <li><NavLink className={setActive} to="/sushi">Суши</NavLink></li>
-                    <li><NavLink className={setActive} to="/rolls">Роллы</NavLink></li>
-                    <li><NavLink className={setActive} to="/salads">Салаты</NavLink></li>
-                    <li><NavLink className={setActive} to="/desserts">Десерты</NavLink></li>
-                    <li><NavLink className={setActive} to="/drinks">Напитки</NavLink></li>
-                </ul>
-            </div>
+            <NewProducts/>
             <div className={styles.burger}>
                 {burgersArray}
             </div>

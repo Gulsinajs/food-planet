@@ -1,0 +1,14 @@
+.products {
+    /*background-color: #FCFCFC;*/
+    display: flex;
+    justify-content: flex-start;
+    padding: 56px 0 20px;
+}
+
+.products ul li {
+    /*margin-right: 16px;*/
+}
+
+.active {
+    color: #FF583E;
+}

@@ -47,38 +47,6 @@
     color: #FF583E;
 }
 
-.products {
-    display: flex;
-    justify-content: flex-start;
-    padding: 56px 0 20px;
-}
-
-h2 {
-    font-size: 25px;
-    line-height: 29px;
-    color: #254F4C;
-    margin-left: 110px;
-    margin-right: 164px;
-}
-
-h3 {
-    font-size: 20px;
-    line-height: 23px;
-}
-
-a {
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 19px;
-    color: #1D3130;
-}
-
-ul li {
-    list-style: none;
-    display: inline;
-    margin-right: 16px;
-}
-
 .burger {
     display: flex;
     justify-content: center;
@@ -135,10 +103,6 @@ ul li {
     display: flex;
     justify-content: flex-start;
     padding: 20px 0 20px;
-}
-
-.pizza {
-
 }
 
 .sideBar {
