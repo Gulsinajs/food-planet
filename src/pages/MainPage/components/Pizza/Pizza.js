@@ -10,17 +10,18 @@ const Pizza = () => {
                 <h3>{item.title}</h3>
                 <p>{item.subTitle}</p>
                 <p className={styles.price}>{item.price}<span> сом</span></p>
-                <div className={styles.optionBtn}>
-                    <button>&mdash;</button>
+                <div className={styles.pizzaBtn}>
+                    <button>-</button>
                     <span> 1 </span>
                     <button>+</button>
                 </div>
-                <div className={styles.btn}>
+                <div className={styles.blueBtn}>
                     <button>В корзину</button>
                 </div>
             </div>
         )
     );
+
     return (
         <div className={styles.pizza}>
             <div className={styles.sideBar}>

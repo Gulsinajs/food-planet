@@ -1,8 +1,3 @@
-.pizza {
-    background-color: #FCFCFC;
-    width: 100%;
-}
-
 .sideBar {
     text-align: right;
     font-size: 14px;
@@ -15,7 +10,7 @@
     height: 40px;
     border: 1px solid #C4C4C4;
     margin-left: 8px;
-    margin-right: 130px;
+    margin-right: 110px;
     cursor: pointer;
 }
 
@@ -47,11 +42,6 @@
     top: -50px;
 }
 
-.pizzaBox h3 {
-    font-size: 20px;
-    line-height: 23px;
-}
-
 .pizzaBox p {
     font-size: 14px;
     line-height: 16px;
@@ -62,10 +52,10 @@
 p.price {
     font-size: 20px;
     line-height: 23px;
-    color: #254F4C!important;
+    color: #254F4C !important;
 }
 
-.optionBtn button {
+.pizzaBtn button {
     width: 16px;
     color: #FF583E;
     background-color: transparent;
@@ -74,7 +64,7 @@ p.price {
     margin: 24px 0 16px;
 }
 
-.btn button {
+.blueBtn button {
     width: 200px;
     height: 48px;
     background-color: #254F4C;

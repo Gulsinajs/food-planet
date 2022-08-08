@@ -1,22 +1,24 @@
 import React from 'react';
 import styles from './Menu.module.css';
-import {NavLink} from 'react-router-dom';
+import {NavLink, Outlet} from 'react-router-dom';
 
 const Menu = () => {
+
+    const setActive = ({isActive}) => isActive ? styles.active : "";
+
     return (
         <div className={styles.menu}>
-            <div className={styles.menuTitle}>
-                <h2>Здесь будет Меню</h2>
-            </div>
-            {/*<ul>*/}
-            {/*    <li><NavLink>Пицца</NavLink></li>*/}
-            {/*    <li><NavLink>Бургер</NavLink></li>*/}
-            {/*    <li><NavLink>Суши</NavLink></li>*/}
-            {/*    <li><NavLink>Роллы</NavLink></li>*/}
-            {/*    <li><NavLink>Салаты</NavLink></li>*/}
-            {/*    <li><NavLink>Десерты</NavLink></li>*/}
-            {/*    <li><NavLink>Напитки</NavLink></li>*/}
-            {/*</ul>*/}
+            <h2>Меню</h2>
+            <ul>
+                <li><NavLink className={setActive} to="/menu/pizza">Пицца</NavLink></li>
+                <li><NavLink className={setActive} to="/menu/burger">Бургер</NavLink></li>
+                <li><NavLink className={setActive} to="/sushi">Суши</NavLink></li>
+                <li><NavLink className={setActive} to="/rolls">Роллы</NavLink></li>
+                <li><NavLink className={setActive} to="/salads">Салаты</NavLink></li>
+                <li><NavLink className={setActive} to="/desserts">Десерты</NavLink></li>
+                <li><NavLink className={setActive} to="/drinks">Напитки</NavLink></li>
+            </ul>
+            <Outlet/>
         </div>
     );
 };

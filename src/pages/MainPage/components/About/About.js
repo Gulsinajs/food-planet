@@ -12,16 +12,12 @@ const About = () => {
             </div>
         )
     );
+
     return (
         <div className={styles.about}>
-            <div className={styles.aboutTitle}>
-                <h2>Почему выбирают нас:</h2>
-            </div>
+            <h2>Почему выбирают нас:</h2>
             <div className={styles.aboutFlex}>
                 {aboutArray}
-            </div>
-            <div className={styles.feedBack}>
-                <h2>Отзывы</h2>
             </div>
         </div>
     );

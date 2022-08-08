@@ -9,9 +9,9 @@ const Burger = () => {
                 <img src={item.image} alt="cheeseburger"/>
                 <h3>{item.title}</h3>
                 <p>{item.subTitle}</p>
-                <p className={styles.price}>{item.price}</p>
+                <h3>{item.price} сом</h3>
                 <div className={styles.burgerBtn}>
-                    <button>&mdash;</button>
+                    <button>-</button>
                     <span> 1 </span>
                     <button>+</button>
                 </div>
@@ -21,6 +21,7 @@ const Burger = () => {
             </div>
         )
     );
+
     return (
         <div className={styles.burger}>
             {burgersArray}
