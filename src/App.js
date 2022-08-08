@@ -4,7 +4,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import MainPage from "./pages/MainPage/components/MainPage";
-import CardPage from "./pages/CardPage/components/CardPage";
+import CartPage from "./pages/CartPage/components/CartPage";
 import NotFound from "./pages/MainPage/components/NotFound/NotFound";
 import Menu from "./pages/MainPage/components/Menu/Menu";
 
@@ -16,7 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<MainPage/>}/>
                     <Route path="/menu" element={<Menu/>}/>
-                    <Route path="/card" element={<CardPage/>}/>
+                    <Route path="/cart" element={<CartPage/>}/>
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>
                 <Footer/>
