@@ -25,7 +25,7 @@ const CartPage = () => {
                     <td><input type="number"/></td>
                     <td><p><span></span> сом</p></td>
                     <td><p><span></span> сом</p></td>
-                    <td className={styles.delete_in_cart}><a href=""><img src={xCircle} alt=""/></a></td>
+                    <td className={styles.delete_in_cart}><a href="#"><img src={xCircle} alt=""/></a></td>
                 </tr>
                 <tr className={styles.count_element}>
                     <th colSpan={4}><p>Итого: </p></th>
