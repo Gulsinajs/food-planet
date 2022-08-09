@@ -24,7 +24,7 @@ const SideBar = () => {
                     </div>
                     <div className={styles.navigation_bar}>
                         <ul>
-                            <li><NavLink className={setActiveLink} to="/adminPanel"><img src={IconMain} alt=""/>Главная</NavLink></li>
+                            <li><NavLink className={setActiveLink} to="/sideBar/adminPanel"><img src={IconMain} alt=""/>Главная</NavLink></li>
                             <li><NavLink className={setActiveLink} to="/orders"><img src={IconOrders} alt=""/>Заказы</NavLink></li>
                             <li><NavLink className={setActiveLink} to="/menu"><img src={IconMenu} alt=""/>Меню</NavLink></li>
                             <li><NavLink className={setActiveLink} to="/contacts"><img src={IconContacts} alt=""/>Контакты</NavLink></li>
