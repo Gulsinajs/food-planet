@@ -9,6 +9,7 @@ import NotFound from "./pages/MainPage/components/NotFound/NotFound";
 import Menu from "./pages/MainPage/components/Menu/Menu";
 import Burger from "./pages/MainPage/components/Burger/Burger";
 import Pizza from "./pages/MainPage/components/Pizza/Pizza";
+import SideBar from "./pages/Admin/SideBar/SideBar";
 
 function App() {
     return (
@@ -22,10 +23,10 @@ function App() {
                     <Route path="/menu/pizza" element={<Pizza/>}/>
                     <Route path="/cart" element={<CartPage/>}/>
                     <Route path="*" element={<NotFound/>}/>
+                    <Route path="/admin/sideBar" element={<SideBar/>}/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>
-
         </>
     );
 }
