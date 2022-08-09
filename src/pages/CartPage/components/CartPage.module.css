@@ -1,0 +1,93 @@
+table {
+    font-size: 28px;
+    border-collapse: collapse;
+}
+
+td {
+    width: 150px;
+    border: 1px solid black;
+}
+
+.cart_title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.cart_title h3 {
+    font-size: 36px;
+    line-height: 39px;
+    color: #1D3130;
+}
+
+.cart_title h4 {
+    font-size: 21px;
+    line-height: 24px;
+    color: #2B4241;
+    margin: 8px 0;
+}
+
+.products_title {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8px 0 16px;
+    font-size: 16px;
+    color: #1D3130;
+}
+
+.products_title p:first-child {
+    text-align: left;
+}
+
+.products_in_cart {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8px 0 8px;
+    vertical-align: middle;
+}
+
+.products_in_cart input {
+    width: 100px;
+    padding: 10px 10px;
+    border: 1px solid #D2D2D7;
+    border-radius: 5px;
+}
+
+.count_element {
+    height: 55px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+
+.count_element p {
+    padding: 0 40px;
+}
+
+.place_order {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+.place_order a {
+    color: #254F4C;
+    font-size: 18px;
+    line-height: 21px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 40px;
+    padding: 16px 0;
+}
+
+.place_order button {
+    width: 200px;
+    height: 48px;
+    background-color: #254F4C;
+    border-radius: 40px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-right: 40px;
+}
+

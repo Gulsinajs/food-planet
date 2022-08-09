@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Burger.module.css';
 import {burgers} from '../../../../constants';
 
 const Burger = () => {
+
+    const [count, setCount] = useState(0);
+
+    function decrementCount() {
+        setCount(count - 1);
+    }
+    function incrementCount() {
+        setCount(count + 1);
+    }
 
     const burgersArray = burgers.map(item => (
             <div className={styles.burgerBox}>
@@ -11,12 +20,12 @@ const Burger = () => {
                 <p>{item.subTitle}</p>
                 <h3>{item.price} сом</h3>
                 <div className={styles.burgerBtn}>
-                    <button>-</button>
-                    <span> 1 </span>
-                    <button>+</button>
+                    <button onClick={decrementCount}>-</button>
+                    <span> {count} </span>
+                    <button onClick={incrementCount}>+</button>
                 </div>
                 <div className={styles.redBtn}>
-                    <button>В корзину</button>
+                    <button type="submit">В корзину</button>
                 </div>
             </div>
         )
