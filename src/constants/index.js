@@ -156,6 +156,7 @@ export const about = [
 
 export const feedBack = [
     {
+        id: 1,
         image: [Avatar],
         userName: "Сергей",
         commit: "Большое спасибо! 5 пицц доставили даже быстрее чем планировалось.\n" +
@@ -164,6 +165,7 @@ export const feedBack = [
         date: "02.07.2020"
     },
     {
+        id: 2,
         image: [Avatar],
         userName: "Сергей",
         commit: "Очень вкусные роллы Хаки, всем рекомендую!\n" +
@@ -171,6 +173,7 @@ export const feedBack = [
         date: "02.07.2020"
     },
     {
+        id: 3,
         image: [Avatar],
         userName: "Сергей",
         commit: "Очень избирателен в еде, и Уже в третий раз не разочаровываюсь в Food Planet,\n" +
@@ -178,6 +181,7 @@ export const feedBack = [
         date: "02.07.2020"
     },
     {
+        id: 4,
         image: [Avatar],
         userName: "Сергей",
         commit: "Хочу поблагодарить за бургер!Очень вкусненький в меру остренький)\n" +
