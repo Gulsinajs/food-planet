@@ -10,7 +10,7 @@ import Menu from "./pages/MainPage/components/Menu/Menu";
 import Burger from "./pages/MainPage/components/Burger/Burger";
 import Pizza from "./pages/MainPage/components/Pizza/Pizza";
 import SideBar from "./pages/Admin/SideBar/SideBar";
-import AdminPanel from "./pages/Admin/AdminPanel/AdminPanel";
+import Reviews from "./pages/Admin/Reviews/Reviews";
 
 function App() {
     return (
@@ -25,7 +25,7 @@ function App() {
                     <Route path="/cart" element={<CartPage/>}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="/admin/sideBar" element={<SideBar/>}/>
-                    <Route path="/sideBar/adminPanel" element={<AdminPanel/>}/>
+                    <Route path="/sideBar/reviews" element={<Reviews/>}/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>
