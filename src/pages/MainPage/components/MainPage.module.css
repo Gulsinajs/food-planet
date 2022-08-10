@@ -1,7 +1,7 @@
 .mainPage {
     background-color: #FCFCFC;
     max-width: 1440px;
-    z-index: 3;
+    /*z-index: 3;*/
 }
 
 .mainPage_flex {
