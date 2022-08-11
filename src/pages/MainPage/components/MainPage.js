@@ -1,19 +1,21 @@
-import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import React from "react";
 import styles from "./MainPage.module.css";
 import smallArrow from "../../../media/icons/smallArrow.svg";
 import BigBurger from "../../../media/images/burger.png";
+import Header from "../../../components/Header/Header";
 import FeedBack from "./Feedback/FeedBack";
 import NewProducts from "./NewProducts/NewProducts";
 import Menu from "./Menu/Menu";
 import Burger from "./Burger/Burger";
 import Pizza from "./Pizza/Pizza";
 import About from "./About/About";
+import Footer from "../../../components/Footer/Footer";
 
 const MainPage = () => {
 
     return (
         <div className={styles.mainPage}>
+            <Header/>
             <div className={styles.mainPage_flex}>
                 <div className={styles.mainTitle}>
                     <h1>Доставка вкусной еды до 30 минут + напиток в подарок!</h1>
@@ -31,6 +33,7 @@ const MainPage = () => {
             <Pizza/>
             <About/>
             <FeedBack/>
+            <Footer/>
         </div>
     );
 };

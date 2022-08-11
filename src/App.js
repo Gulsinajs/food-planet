@@ -2,8 +2,6 @@ import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {Toaster} from "react-hot-toast";
 import './App.css';
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import MainPage from "./pages/MainPage/components/MainPage";
 import CartPage from "./pages/CartPage/components/CartPage";
 import NotFound from "./pages/MainPage/components/NotFound/NotFound";
@@ -17,7 +15,6 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <Header/>
                 <Routes>
                     <Route path="/" element={<MainPage/>}/>
                     <Route path="/menu" element={<Menu/>}/>
@@ -28,7 +25,6 @@ function App() {
                     <Route path="/admin/sideBar" element={<SideBar/>}/>
                     <Route path="/sideBar/reviews" element={<Reviews/>}/>
                 </Routes>
-                <Footer/>
                 <Toaster/>
             </BrowserRouter>
         </>
