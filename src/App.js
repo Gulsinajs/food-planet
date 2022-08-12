@@ -10,6 +10,7 @@ import Burger from "./pages/MainPage/components/Burger/Burger";
 import Pizza from "./pages/MainPage/components/Pizza/Pizza";
 import SideBar from "./pages/Admin/SideBar/SideBar";
 import Reviews from "./pages/Admin/Reviews/Reviews";
+import AddReviews from "./pages/Admin/AddReviews/AddReviews";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/cart" element={<CartPage/>}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="/admin/sideBar" element={<SideBar/>}/>
+                    <Route path="/admin/add-reviews" element={<AddReviews/>}/>
                     <Route path="/sideBar/reviews" element={<Reviews/>}/>
                 </Routes>
                 <Toaster/>
