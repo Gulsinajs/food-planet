@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './SideBar.module.css';
 import LogoAdmin from '../../../media/icons/logoAdmin.svg';
@@ -13,8 +13,6 @@ import Reviews from "../Reviews/Reviews";
 
 const SideBar = () => {
 
-    const setActiveLink = ({isActive}) => isActive ? styles.active : "";
-
     return (
         <div className={styles.admin}>
             <div className={styles.side_bar}>
@@ -25,12 +23,12 @@ const SideBar = () => {
                     </div>
                     <div className={styles.navigation_bar}>
                         <ul>
-                            <li><NavLink className={setActiveLink} to="/"><img src={IconMain} alt=""/>Главная</NavLink></li>
-                            <li><NavLink className={setActiveLink} to="/orders"><img src={IconOrders} alt=""/>Заказы</NavLink></li>
-                            <li><NavLink className={setActiveLink} to="/menu"><img src={IconMenu} alt=""/>Меню</NavLink></li>
-                            <li><NavLink className={setActiveLink} to="/contacts"><img src={IconContacts} alt=""/>Контакты</NavLink></li>
-                            <li><NavLink className={setActiveLink} to="/sideBar/reviews"><img src={IconReviews} alt=""/>Отзывы</NavLink></li>
-                            <li><NavLink className={setActiveLink} to="/employees"><img src={IconStaff} alt=""/>Сотрудники</NavLink></li>
+                            <li className={styles.nav_hover}><NavLink to="/"><img src={IconMain} alt=""/>Главная</NavLink></li>
+                            <li className={styles.nav_hover}><NavLink to="/orders"><img src={IconOrders} alt=""/>Заказы</NavLink></li>
+                            <li className={styles.nav_hover}><NavLink to="/menu"><img src={IconMenu} alt=""/>Меню</NavLink></li>
+                            <li className={styles.nav_hover}><NavLink to="/contacts"><img src={IconContacts} alt=""/>Контакты</NavLink></li>
+                            <li className={styles.nav_hover}><NavLink to="/sideBar/reviews"><img src={IconReviews} alt=""/>Отзывы</NavLink></li>
+                            <li className={styles.nav_hover}><NavLink to="/employees"><img src={IconStaff} alt=""/>Сотрудники</NavLink></li>
                         </ul>
                     </div>
                 </div>

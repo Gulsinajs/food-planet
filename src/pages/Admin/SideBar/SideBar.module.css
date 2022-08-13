@@ -29,6 +29,7 @@
 
 .navigation_bar ul li {
     padding: 18px 0;
+    background-color: #363740;
 }
 
 .navigation_bar img{
@@ -36,10 +37,6 @@
     margin-left: 32px;
 }
 
-.navigation_bar a {
-    color: #A4A6B3;
-}
-
-.active {
-    background-color: #9FA2B4;
+.nav_hover:hover {
+    background-color: #6f7181;
 }
