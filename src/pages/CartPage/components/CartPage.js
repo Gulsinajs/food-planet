@@ -4,7 +4,6 @@ import styles from './CartPage.module.css';
 import xCircle from '../../../media/icons/x-circle.png';
 import Back from '../../../media/icons/back-arroy.png';
 import {toast} from "react-hot-toast";
-import data from "bootstrap/js/src/dom/data";
 
 const CartPage = () => {
     const [goods, setGoods] = useState([]);
@@ -15,24 +14,22 @@ const CartPage = () => {
         setGoods(Object.values(goods));
     }
 
-    // const deleteGoods = (id) => {
-    //     const url = 'http://localhost:3001/burgers/' + id;
-    //
-    //     const options = {
-    //         method: 'DELETE'
-    //     }
-    //
-    //     fetch(url, options)
-    //         .then(response => {
-    //             if (response.ok) {
-    //                 toast.success('Успешно удалено');
-    //                 getGoods();
-    //             } else {
-    //                 toast.error('Ошибка. Статус ошибки: ' + response.status);
-    //             }
-    //         })
-    // }
-    //
+    const deleteGoods = (id) => {
+
+        const options = {
+            method: 'DELETE'
+        }
+
+        fetch(options)
+            .then(response => {
+                if (response.ok) {
+                    toast.success('Успешно удалено');
+                } else {
+                    toast.error('Ошибка. Статус ошибки: ' + response.status);
+                }
+            })
+    }
+
     // const getGoods = () => {
     //     const url = 'http://localhost:3001/burgers';
     //
@@ -80,7 +77,7 @@ const CartPage = () => {
                             <td><p><span>{item.price}</span> сом</p></td>
                             <td><p><span>{item.price}</span> сом</p></td>
                             <td className={styles.delete_in_cart}>
-                                <button><img src={xCircle} alt=""/></button>
+                                <button onClick={()=> deleteGoods(item.id)}><img src={xCircle} alt=""/></button>
                             </td>
                         </tr>
                     )

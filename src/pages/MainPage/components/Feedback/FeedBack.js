@@ -40,7 +40,7 @@ const FeedBack = () => {
             <div className={styles.feedBackFlex}>
                 {
                     feedBacks.map(item => {
-                        return <div className={styles.feedBackBox}>
+                        return <div key={item.id} className={styles.feedBackBox}>
                             <img className={styles.absolute} src={Pen} alt="/"/>
                             <img className={styles.avatar} src={item.image} alt="avatar"/>
                             <div className={styles.feedBackUser}>

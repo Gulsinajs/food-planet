@@ -1,3 +1,7 @@
+.cart_page {
+    box-sizing: border-box;
+}
+
 .cart_title {
     text-align: center;
     margin: 30px 0;
@@ -64,6 +68,13 @@
 .delete_in_cart img {
     width: 20px;
     height: 20px;
+}
+
+.delete_in_cart button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .count_element p {

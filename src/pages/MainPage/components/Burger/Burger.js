@@ -1,16 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import toast from 'react-hot-toast';
 import styles from './Burger.module.css';
+import Button from "./Button";
 
 const Burger = () => {
-
-    // const [count, setCount] = useState(0);
-    // function decrementCount() {
-    //     setCount(count - 1);
-    // }
-    // function incrementCount() {
-    //     setCount(count + 1);
-    // }
 
      const [burgers, setBurgers] = useState([]);
 
@@ -50,11 +43,7 @@ const Burger = () => {
                         <h3>{item.title}</h3>
                         <p>{item.subTitle}</p>
                         <h3>{item.price} сом</h3>
-                        <div className={styles.burgerBtn}>
-                            <button>-</button>
-                            <span> 1 </span>
-                            <button>+</button>
-                        </div>
+                        <Button/>
                         <div className={styles.redBtn}>
                             <button onClick={()=> getProduct(item)}>В корзину</button>
                         </div>

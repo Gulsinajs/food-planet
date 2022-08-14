@@ -5,7 +5,7 @@ import {about} from '../../../../constants';
 const About = () => {
 
     const aboutArray = about.map(item => (
-            <div className={styles.aboutBox}>
+            <div key={item.id} className={styles.aboutBox}>
                 <img src={item.image} alt="delivery"/>
                 <h3>{item.title}</h3>
                 <p>{item.subTitle}</p>
