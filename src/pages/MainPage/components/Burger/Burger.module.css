@@ -20,6 +20,8 @@
 }
 
 .burgerBox img {
+    width: 200px;
+    height: 142px;
     position: absolute;
     top: -50px;
 }

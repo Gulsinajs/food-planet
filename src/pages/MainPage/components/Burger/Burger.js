@@ -1,39 +1,67 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import toast from 'react-hot-toast';
 import styles from './Burger.module.css';
-import {burgers} from '../../../../constants';
 
 const Burger = () => {
 
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
+    // function decrementCount() {
+    //     setCount(count - 1);
+    // }
+    // function incrementCount() {
+    //     setCount(count + 1);
+    // }
 
-    function decrementCount() {
-        setCount(count - 1);
-    }
-    function incrementCount() {
-        setCount(count + 1);
+     const [burgers, setBurgers] = useState([]);
+
+    const getBurgers = () => {
+        const url = 'http://localhost:3001/burgers';
+
+        fetch(url)
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    toast.error('Произошла ошибка. Статус ошибки: ' + response.status);
+                }
+            })
+            .then(data => setBurgers(data))
     }
 
-    const burgersArray = burgers.map(item => (
-            <div className={styles.burgerBox}>
-                <img src={item.image} alt="cheeseburger"/>
-                <h3>{item.title}</h3>
-                <p>{item.subTitle}</p>
-                <h3>{item.price} сом</h3>
-                <div className={styles.burgerBtn}>
-                    <button onClick={decrementCount}>-</button>
-                    <span> {count} </span>
-                    <button onClick={incrementCount}>+</button>
-                </div>
-                <div className={styles.redBtn}>
-                    <button type="submit">В корзину</button>
-                </div>
-            </div>
-        )
-    );
+    const getProduct = (data) => {
+        // console.log(data);
+        const id = data.id;
+        let cart = JSON.parse(localStorage.getItem('cartPage')) || {};
+        cart[id] = {...data, count: 1}
+
+        localStorage.setItem('cartPage', JSON.stringify(cart))
+    }
+
+    useEffect(() => {
+        getBurgers();
+    }, [])
 
     return (
         <div className={styles.burger}>
-            {burgersArray}
+            {
+                burgers.map(item => {
+                    return <div key={item.id} className={styles.burgerBox}>
+                        <img src={item.image} alt="cheeseburger"/>
+                        <h3>{item.title}</h3>
+                        <p>{item.subTitle}</p>
+                        <h3>{item.price} сом</h3>
+                        <div className={styles.burgerBtn}>
+                            <button>-</button>
+                            <span> 1 </span>
+                            <button>+</button>
+                        </div>
+                        <div className={styles.redBtn}>
+                            <button onClick={()=> getProduct(item)}>В корзину</button>
+                        </div>
+                    </div>
+                })
+            }
+
         </div>
     );
 };

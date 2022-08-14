@@ -17,7 +17,8 @@ import Avatar from '../media/icons/ellipse.svg';
 
 export const burgers = [
     {
-        image: [firstBurger],
+        id: 1,
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=699&q=80",
         title: "Чизбургер",
         subTitle: "Булка, котлета,сыр, соленый огурец, лук, помидор,\n" +
             "салат айсберг,\n" +
@@ -26,7 +27,8 @@ export const burgers = [
         price: "200"
     },
     {
-        image: [secondBurger],
+        id: 2,
+        image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
         title: "Чизбургер",
         subTitle: "Булка, котлета,сыр, соленый огурец, лук, помидор,\n" +
             "салат айсберг,\n" +
@@ -35,7 +37,8 @@ export const burgers = [
         price: "200"
     },
     {
-        image: [thirdBurger],
+        id: 3,
+        image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
         title: "Чизбургер",
         subTitle: "Булка, котлета,сыр, соленый огурец, лук, помидор,\n" +
             "салат айсберг,\n" +
@@ -44,7 +47,8 @@ export const burgers = [
         price: "200"
     },
     {
-        image: [fourthBurger],
+        id: 4,
+        image: "https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
         title: "Чизбургер",
         subTitle: "Булка, котлета,сыр, соленый огурец, лук, помидор,\n" +
             "салат айсберг,\n" +
