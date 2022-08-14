@@ -8,7 +8,6 @@ import Menu from "./Menu/Menu";
 import Burger from "./Burger/Burger";
 import Pizza from "./Pizza/Pizza";
 import About from "./About/About";
-import Footer from "../../../components/Footer/Footer";
 
 const MainPage = () => {
 
@@ -22,7 +21,6 @@ const MainPage = () => {
             <Pizza/>
             <About/>
             <FeedBack/>
-            <Footer/>
         </div>
     );
 };

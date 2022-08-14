@@ -11,6 +11,7 @@ import Pizza from "./pages/MainPage/components/Pizza/Pizza";
 import SideBar from "./pages/Admin/SideBar/SideBar";
 import Reviews from "./pages/Admin/Reviews/Reviews";
 import AddReviews from "./pages/Admin/AddReviews/AddReviews";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                     <Route path="/admin/add-reviews" element={<AddReviews/>}/>
                     <Route path="/sideBar/reviews" element={<Reviews/>}/>
                 </Routes>
+                <Footer/>
                 <Toaster/>
             </BrowserRouter>
         </>
