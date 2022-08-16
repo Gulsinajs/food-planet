@@ -22,6 +22,12 @@ const CartPage = () => {
         getProducts();
     }
 
+    const getTotalSum = () => {
+        return goods.reduce((sum, item) => {
+            return sum + (item.count * item.price);
+        }, 0);
+    }
+
     const deleteGoods = (id) => {
 
         const options = {
@@ -88,16 +94,15 @@ const CartPage = () => {
                     )
                 }
                 </tbody>
-                <tfoot>
-                <tr className={styles.count_element}>
-                    <th colSpan={4}><p>Итого: </p></th>
-                    <th><p><span></span> сом</p></th>
-                </tr>
-                </tfoot>
             </table>
+            <div className={styles.count_element}>
+                <h3>Итого: <span>{getTotalSum()}</span><span>сом</span></h3>
+            </div>
             <div className={styles.place_order}>
                 <Link to="/"><img src={Back} alt=""/>Продолжить покупки</Link>
-                <button>Оформить заказ</button>
+                <Link to="/checkout">
+                    <button>Оформить заказ</button>
+                </Link>
             </div>
         </div>
     );
