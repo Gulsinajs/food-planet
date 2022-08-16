@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const Burger = () => {
 
-     const [burgers, setBurgers] = useState([]);
+    const [burgers, setBurgers] = useState([]);
 
     const getBurgers = () => {
         const url = 'http://localhost:3001/burgers';
@@ -45,12 +45,11 @@ const Burger = () => {
                         <h3>{item.price} сом</h3>
                         <Button/>
                         <div className={styles.redBtn}>
-                            <button onClick={()=> getProduct(item)}>В корзину</button>
+                            <button onClick={() => getProduct(item)}>В корзину</button>
                         </div>
                     </div>
                 })
             }
-
         </div>
     );
 };

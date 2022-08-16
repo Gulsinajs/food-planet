@@ -14,6 +14,14 @@ const CartPage = () => {
         setGoods(Object.values(goods));
     }
 
+    const changeCount = (e, data) => {
+        const goods = JSON.parse(localStorage.getItem('cartPage'));
+        goods[data.id].count = +e.currentTarget.value;
+        console.log(goods);
+        localStorage.setItem('cartPage', JSON.stringify(goods));
+        getProducts();
+    }
+
     const deleteGoods = (id) => {
 
         const options = {
@@ -67,17 +75,14 @@ const CartPage = () => {
                         <tr key={item.id} className={styles.products_in_cart}>
                             <td><img src={item.image} alt=""/></td>
                             <td>{item.title}</td>
-                            <td><input type="number"/>
-                                <span className={styles.count_button}>
-                                <button>-</button>
-                                <span> 1 </span>
-                                <button>+</button>
-                            </span>
+                            <td>
+                                <input onChange={e => changeCount(e, item)} defaultValue={item.count}
+                                       type="number"/>
                             </td>
                             <td><p><span>{item.price}</span> сом</p></td>
-                            <td><p><span>{item.price}</span> сом</p></td>
+                            <td><p><span>{item.count * item.price}</span> сом</p></td>
                             <td className={styles.delete_in_cart}>
-                                <button onClick={()=> deleteGoods(item.id)}><img src={xCircle} alt=""/></button>
+                                <button onClick={() => deleteGoods(item.id)}><img src={xCircle} alt=""/></button>
                             </td>
                         </tr>
                     )
