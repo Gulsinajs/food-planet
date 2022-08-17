@@ -12,6 +12,7 @@ import SideBar from "./pages/Admin/SideBar/SideBar";
 import Reviews from "./pages/Admin/Reviews/Reviews";
 import AddReviews from "./pages/Admin/AddReviews/AddReviews";
 import Footer from "./components/Footer/Footer";
+import Checkout from "./pages/CartPage/components/Checkout/Checkout";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/menu/burger" element={<Burger/>}/>
                     <Route path="/menu/pizza" element={<Pizza/>}/>
                     <Route path="/cart" element={<CartPage/>}/>
+                    <Route path="/checkout" element={<Checkout/>}/>
                     <Route path="*" element={<NotFound/>}/>
                     <Route path="/admin/sideBar" element={<SideBar/>}/>
                     <Route path="/admin/add-reviews" element={<AddReviews/>}/>
