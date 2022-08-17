@@ -1,26 +1,38 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import toast from 'react-hot-toast';
 import styles from './Pizza.module.css';
-import {pizzas} from "../../../../constants";
+import Button from "../Burger/Button";
 
 const Pizza = () => {
 
-    const pizzasArray = pizzas.map(item => (
-            <div className={styles.pizzaBox}>
-                <img src={item.image} alt=""/>
-                <h3>{item.title}</h3>
-                <p>{item.subTitle}</p>
-                <p className={styles.price}>{item.price}<span> сом</span></p>
-                <div className={styles.pizzaBtn}>
-                    <button>-</button>
-                    <span> 1 </span>
-                    <button>+</button>
-                </div>
-                <div className={styles.blueBtn}>
-                    <button>В корзину</button>
-                </div>
-            </div>
-        )
-    );
+    const [pizzas, setPizzas] = useState([]);
+
+    const getPizzas = () => {
+        const url = ' http://localhost:3001/pizzas';
+
+        fetch(url)
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    toast.error('Произошла ошибка. Статус ошибки: ' + response.status);
+                }
+            })
+            .then(data => setPizzas(data))
+    }
+
+    const getProductPizzas = (data) => {
+        // console.log(data);
+        const id = data.id;
+        let cart = JSON.parse(localStorage.getItem('cartPage')) || {};
+        cart[id] = {...data, count: 1}
+
+        localStorage.setItem('cartPage', JSON.stringify(cart))
+    }
+
+    useEffect(() => {
+        getPizzas();
+    }, [])
 
     return (
         <div className={styles.pizza}>
@@ -34,7 +46,20 @@ const Pizza = () => {
                 </select>
             </div>
             <div className={styles.pizzaFlex}>
-                {pizzasArray}
+                {
+                    pizzas.map(item => {
+                        return <div key={item.id} className={styles.pizzaBox}>
+                                <img src={item.image} alt=""/>
+                                <h3>{item.title}</h3>
+                                <p>{item.subTitle}</p>
+                                <p className={styles.price}>{item.price}<span> сом</span></p>
+                                <Button/>
+                            <div className={styles.blueBtn}>
+                                <button onClick={() => getProductPizzas(item)}>В корзину</button>
+                            </div>
+                        </div>
+                    })
+                }
             </div>
             <div className={styles.showBtn}>
                 <button>Показать еще</button>
