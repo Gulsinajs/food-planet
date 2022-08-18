@@ -44,20 +44,6 @@ const CartPage = () => {
             })
     }
 
-    // const getGoods = () => {
-    //     const url = 'http://localhost:3001/burgers';
-    //
-    //     fetch(url)
-    //         .then(response => {
-    //             if (response.ok) {
-    //                 return response.json();
-    //             } else {
-    //                 toast.error('Произошла ошибка. Статус: ' + response.status);
-    //             }
-    //         })
-    //         .then(data => setGoods(data))
-    // }
-
     useEffect(getProducts, []);
 
     return (
