@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './SideBar.module.css';
 import LogoAdmin from '../../../media/icons/logoAdmin.svg';
@@ -9,7 +9,7 @@ import IconMenu from '../../../media/icons/iconMenu.svg';
 import IconContacts from '../../../media/icons/iconContacts.svg';
 import IconReviews from '../../../media/icons/iconReviews.svg';
 import IconStaff from '../../../media/icons/iconStaff.svg';
-import Reviews from "../Reviews/Reviews";
+
 
 const SideBar = () => {
 
@@ -27,7 +27,7 @@ const SideBar = () => {
                             <li className={styles.nav_hover}><NavLink to="/orders"><img src={IconOrders} alt=""/>Заказы</NavLink></li>
                             <li className={styles.nav_hover}><NavLink to="/menu"><img src={IconMenu} alt=""/>Меню</NavLink></li>
                             <li className={styles.nav_hover}><NavLink to="/contacts"><img src={IconContacts} alt=""/>Контакты</NavLink></li>
-                            <li className={styles.nav_hover}><NavLink to="/sideBar/reviews"><img src={IconReviews} alt=""/>Отзывы</NavLink></li>
+                            <li className={styles.nav_hover}><NavLink to="/admin/reviews"><img src={IconReviews} alt=""/>Отзывы</NavLink></li>
                             <li className={styles.nav_hover}><NavLink to="/employees"><img src={IconStaff} alt=""/>Сотрудники</NavLink></li>
                         </ul>
                     </div>

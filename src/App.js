@@ -28,10 +28,10 @@ function App() {
                         <Route path="/cart" element={<CartPage/>}/>
                         <Route path="/checkout" element={<Checkout/>}/>
                     </Route>
-                    <Route path="/admin" element={<Admin/>}>
-                        <Route path="/admin/sideBar" element={<SideBar/>}/>
-                        <Route path="/admin/sideBar/reviews" element={<Reviews/>}/>
-                        <Route path="/admin/add-reviews" element={<AddReviews/>}/>
+                    <Route path="/" element={<Admin/>}>
+                        <Route path="sideBar" element={<SideBar/>}/>
+                        <Route path="/admin/reviews" element={<Reviews/>}/>
+                        <Route path="/add-reviews" element={<AddReviews/>}/>
                     </Route>
                     <Route path="*" element={<NotFound/>}/>
                 </Routes>

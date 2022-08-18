@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Admin.module.css';
 import SideBar from "./SideBar/SideBar";
+import Reviews from "./Reviews/Reviews";
 
 const Admin = () => {
     return (
@@ -9,7 +10,7 @@ const Admin = () => {
                 <SideBar/>
             </div>
             <div className={styles.panelRight}>
-                <h1>Hello</h1>
+                {/*<Reviews/>*/}
             </div>
         </div>
     );

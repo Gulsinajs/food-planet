@@ -30,14 +30,16 @@ const CartPage = () => {
 
     const deleteGoods = (id) => {
 
+        const url = 'http://localhost:3001/pizzas/'+ id;
         const options = {
             method: 'DELETE'
         }
 
-        fetch(options)
+        fetch(url, options)
             .then(response => {
                 if (response.ok) {
                     toast.success('Успешно удалено');
+                    getProducts();
                 } else {
                     toast.error('Ошибка. Статус ошибки: ' + response.status);
                 }
