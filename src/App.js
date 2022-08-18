@@ -14,6 +14,7 @@ import Checkout from "./pages/CartPage/components/Checkout/Checkout";
 import Header from "./components/Header/Header";
 import Pizza from "./pages/MainPage/components/Pizza/Pizza";
 import Burger from "./pages/MainPage/components/Burger/Burger";
+import Delivery from "./pages/MainPage/components/Delivery/Delivery";
 
 function App() {
     return (
@@ -25,11 +26,12 @@ function App() {
                         <Route path="menu" element={<Menu/>}/>
                         <Route path="/menu/pizza" element={<Pizza/>}/>
                         <Route path="/menu/burger" element={<Burger/>}/>
+                        <Route path="delivery" element={<Delivery/>}/>
                         <Route path="/cart" element={<CartPage/>}/>
                         <Route path="/checkout" element={<Checkout/>}/>
                     </Route>
                     <Route path="/" element={<Admin/>}>
-                        <Route path="sideBar" element={<SideBar/>}/>
+                        <Route path="/admin/sideBar" element={<SideBar/>}/>
                         <Route path="/admin/reviews" element={<Reviews/>}/>
                         <Route path="/add-reviews" element={<AddReviews/>}/>
                     </Route>
